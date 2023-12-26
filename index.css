@@ -29,6 +29,7 @@ button {
   --background: royalBlue;
   --text: white;
   --font-size: 16px;
+  --font-shadow: var(--font-size);
   --move-hover: -4px;
   --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
   --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
@@ -50,6 +51,7 @@ button {
 button div {
   display: flex;
   overflow: hidden;
+  text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
 button div span {
   display: block;
@@ -96,6 +98,9 @@ button:hover {
 }
 button:hover span {
   --m: calc(var(--font-size) * -1) ;
+}
+button.reverse {
+  --font-shadow:calc(var(--font-size)*-1);
 }
 button.reverse:hover span {
   --m: calc(var(--font-size));
